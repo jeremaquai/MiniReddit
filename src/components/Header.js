@@ -2,10 +2,10 @@ import React from "react";
 
 export default function Header() {
     return (
-        <div title='header' data-testid='header'>
+        <div title='header'>
             <header>
                 <h1>
-                    Header
+                    <span id="logo1">reddit</span><span id="logo2">Creeper</span>
                 </h1>
             </header>
         </div>
