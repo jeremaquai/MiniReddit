@@ -25,6 +25,15 @@ describe('RedditCreeper Project App', function() {
         expect(screen.getByRole('navigation'))
     });
 
+    it('renders a mainPage dive', () => {
+        const { getByTitle } = render(
+            <Provider store={store}>
+                <App />
+            </Provider>
+        );
+        expect(screen.getByTitle(/mainPage/));
+    });
+
     it('renders a footer', () => {
         const { getByTitle } = render(
             <Provider store={store}>
@@ -33,7 +42,8 @@ describe('RedditCreeper Project App', function() {
           );
         expect(screen.getByTitle(/footer/i));
     });
-
+    
+   
 });
 
 

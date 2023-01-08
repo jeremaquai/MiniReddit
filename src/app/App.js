@@ -15,7 +15,6 @@ import {
         <div title='app'>
             <Router>
                 <Header />
-                <div className="navigation">
                 <nav>
                     <ul>
                         <li>
@@ -25,6 +24,8 @@ import {
                         </li>
                     </ul>
                 </nav>
+                <div title="mainPage" className="mainPage">
+
                 </div>
                 <Footer />
             </Router>
