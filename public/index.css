@@ -1,5 +1,6 @@
 /* Header section of the app's styles */
 header {
+    background-color: azure;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -28,9 +29,20 @@ header {
 nav {
     min-height: 10vh;
     max-height: 10vh;
-    background-color: aqua;
+    background-color: orangered;
+    color: azure;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: azure;
+    
 }
 
 /* mainPage Section styles */
@@ -41,8 +53,12 @@ nav {
 
 /* Footer section of the app's Styles */
 footer {
-    background-color: aqua;
+    background-color: orangered;
+    color: azure;
     min-height: 10vh;
     max-height: 10vh;
     border-top: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
