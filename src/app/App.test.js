@@ -1,5 +1,10 @@
 import React from 'react';
-import { screen, render, getByTestId } from '@testing-library/react';
+import { 
+    screen, 
+    render, 
+    getByTestId,
+    getByText
+ } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { store } from './store';
 import App from './App';
@@ -40,10 +45,17 @@ describe('RedditCreeper Project App', function() {
               <App />
             </Provider>
           );
-        expect(screen.getByTitle(/footer/i));
+        expect(screen.getByTitle(/^footer$/i));
     });
     
-   
+    it('renders a copyright logo in the footer', () => {
+        const { getByText } = render(
+            <Provider store={store}>
+              <App />
+            </Provider>
+        );
+        expect(screen.getByText(/©/i))
+    });
 });
 
 

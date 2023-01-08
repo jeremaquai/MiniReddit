@@ -26,7 +26,7 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">RedditCREEPER</h3>
 
   <p align="center">
     project_description
@@ -77,7 +77,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `jeremaquai`, `Minireddit`, `twitter_handle`, `jeremiah-sparks-0ba36a239`, `gmail`, `jeremaquai`, `project_title`, `project_description`
+Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `jeremaquai`, `Minireddit`, `twitter_handle`, `jeremiah-sparks-0ba36a239`, `gmail`, `jeremaquai`, `RedditCREEPER`, `project_description`
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -89,10 +89,9 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 * [React.js](https://reactjs.org/)
 * [React Router](https://reactrouter.com/en/main)
 * [React Redux](https://react-redux.js.org/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
+* [Jest](https://jestjs.io/)
+* [Babel](https://babeljs.io/)
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
