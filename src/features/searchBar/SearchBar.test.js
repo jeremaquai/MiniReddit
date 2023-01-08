@@ -6,9 +6,6 @@ import {
     getByText,
     getByRole
  } from '@testing-library/react';
-import { Provider } from 'react-redux';
-import { store } from '../../app/store';
-import App from '../../app/App';
 import SearchBar from './SearchBar';
 
 describe('SearchBar component function', function() {
