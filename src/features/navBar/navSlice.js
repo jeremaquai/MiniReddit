@@ -3,20 +3,7 @@ import { createSlice, current } from "@reduxjs/toolkit";
 import { NAVLINKS } from "../../data/navLinks";
 
 // Create initialState for navSlice
-const initialState = {links: [
-    {
-        name: 'Featured',
-        id: 'Featured'
-    },
-    {
-        name: 'SquaredCircle',
-        id: 'SquaredCircle',
-    },
-    {
-        name: 'Mildlyinfuriating',
-        id: 'Mildlyinfuriating'
-    }
-]};
+const initialState = {links: NAVLINKS };
 
 // Create navSlice
 const navSlice = createSlice({
@@ -24,7 +11,7 @@ const navSlice = createSlice({
     initialState,
     reducers: {
         logNavSlice(state) {
-            console.log(state);
+            console.log(current(state));
         },
         addLink(state, action) {
             state.links.push(action.payload);

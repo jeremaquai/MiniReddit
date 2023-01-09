@@ -1,11 +1,16 @@
+import ROUTES from "../app/routes";
+
 export const NAVLINKS = [
     {
         name: 'Featured',
-        id: 'Featured'
+        route: ROUTES.featuredRoute,
     },
     {
         name: 'SquaredCircle',
-        id: 'SquaredCircle',
+        route: ROUTES.squaredCircleRoute,
     },
-    {id: 'Mildlyinfuriating'}
+    {
+        name: 'Mildlyinfuriating',
+        route: ROUTES.mildlyInfuriatingRoute,
+    }
 ];

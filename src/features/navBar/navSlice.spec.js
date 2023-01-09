@@ -1,3 +1,4 @@
+import ROUTES from '../../app/routes';
 import navSliceReducer, {
     logNavSlice,
     addLink
@@ -7,34 +8,37 @@ describe('navSlice Reducer', () => {
     const initialState = [
         {
             name: 'Featured',
-            id: 'Featured'
+            route: ROUTES.featuredRoute,
         },
         {
             name: 'SquaredCircle',
-            id: 'SquaredCircle',
+            route: ROUTES.squaredCircleRoute,
         },
-        {id: 'Mildlyinfuriating'}
+        {
+            name: 'Mildlyinfuriating',
+            route: ROUTES.mildlyInfuriatingRoute,
+        }
     ];
 
     const linkToAdd = {
         name: 'wellthatsucks',
-        id: 'wellthatsucks',
-    }
+        route: ROUTES.wellThatSucksRoute,
+    };
 
     it('should handle intial state', () => {
         expect(navSliceReducer(undefined, {type: 'unknown'})).toEqual({
             links: [
                 {
                 name: 'Featured',
-                id: 'Featured'
+                route: ROUTES.featuredRoute,
                 },
                 {
                 name: 'SquaredCircle',
-                id: 'SquaredCircle',
+                route: ROUTES.squaredCircleRoute,
                 },
                 {
                 name: 'Mildlyinfuriating',
-                id: 'Mildlyinfuriating'
+                route: ROUTES.mildlyInfuriatingRoute,
                 }]
         });
     });
@@ -43,21 +47,22 @@ describe('navSlice Reducer', () => {
         expect(navSliceReducer(undefined, addLink(linkToAdd))).toEqual({
             links: [
                 {
-                name: 'Featured',
-                id: 'Featured'
-                },
-                {
-                name: 'SquaredCircle',
-                id: 'SquaredCircle',
-                },
-                {
-                name: 'Mildlyinfuriating',
-                id: 'Mildlyinfuriating'
-                },
-                {
-                name: 'wellthatsucks',
-                id: 'wellthatsucks'
-                }]
+                    name: 'Featured',
+                    route: ROUTES.featuredRoute,
+                    },
+                    {
+                    name: 'SquaredCircle',
+                    route: ROUTES.squaredCircleRoute,
+                    },
+                    {
+                    name: 'Mildlyinfuriating',
+                    route: ROUTES.mildlyInfuriatingRoute,
+                    },
+                    {
+                        name: 'wellthatsucks',
+                        route: ROUTES.wellThatSucksRoute,
+                    }
+                ]
         });
     });
 
