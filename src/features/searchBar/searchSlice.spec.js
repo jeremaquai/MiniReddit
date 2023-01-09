@@ -19,7 +19,7 @@ describe('searchSlice Reducer', () => {
     };
     it('should handle initial state', () => {
         expect(searchSliceReducer(undefined, {type: 'unknown'})).toEqual({
-            searchTerm: '',
+            searchTerm: {},
             searchResults: {}
         });
     });

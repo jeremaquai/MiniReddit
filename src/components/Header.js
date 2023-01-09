@@ -6,7 +6,7 @@ export default function Header() {
         <div title='header'>
             <header>
                 <h1>
-                    <span id="logo1">Reddit</span><span id="logo2">CREEPER</span>
+                    <a href="/"><span id="logo1">Reddit</span><span id="logo2">CREEPER</span></a>
                 </h1>
                 <SearchBar />
             </header>

@@ -8,14 +8,17 @@ describe('navSlice Reducer', () => {
     const initialState = [
         {
             name: 'Featured',
+            url: '/featured',
             route: ROUTES.featuredRoute,
         },
-        {
+         {
             name: 'SquaredCircle',
+            url: '/',
             route: ROUTES.squaredCircleRoute,
         },
-        {
-            name: 'Mildlyinfuriating',
+         {
+            name: 'MildlyInfuriating',
+            url: '/',
             route: ROUTES.mildlyInfuriatingRoute,
         }
     ];
@@ -29,16 +32,19 @@ describe('navSlice Reducer', () => {
         expect(navSliceReducer(undefined, {type: 'unknown'})).toEqual({
             links: [
                 {
-                name: 'Featured',
-                route: ROUTES.featuredRoute,
+                    name: 'Featured',
+                    url: '/featured',
+                    route: ROUTES.featuredRoute,
                 },
-                {
-                name: 'SquaredCircle',
-                route: ROUTES.squaredCircleRoute,
+                 {
+                    name: 'SquaredCircle',
+                    url: '/',
+                    route: ROUTES.squaredCircleRoute,
                 },
-                {
-                name: 'Mildlyinfuriating',
-                route: ROUTES.mildlyInfuriatingRoute,
+                 {
+                    name: 'MildlyInfuriating',
+                    url: '/',
+                    route: ROUTES.mildlyInfuriatingRoute,
                 }]
         });
     });
@@ -46,17 +52,20 @@ describe('navSlice Reducer', () => {
     it('should handle addLink', () => {
         expect(navSliceReducer(undefined, addLink(linkToAdd))).toEqual({
             links: [
-                {
-                    name: 'Featured',
-                    route: ROUTES.featuredRoute,
+                    {
+                        name: 'Featured',
+                        url: '/featured',
+                        route: ROUTES.featuredRoute,
                     },
                     {
-                    name: 'SquaredCircle',
-                    route: ROUTES.squaredCircleRoute,
+                        name: 'SquaredCircle',
+                        url: '/',
+                        route: ROUTES.squaredCircleRoute,
                     },
                     {
-                    name: 'Mildlyinfuriating',
-                    route: ROUTES.mildlyInfuriatingRoute,
+                        name: 'MildlyInfuriating',
+                        url: '/',
+                        route: ROUTES.mildlyInfuriatingRoute,
                     },
                     {
                         name: 'wellthatsucks',

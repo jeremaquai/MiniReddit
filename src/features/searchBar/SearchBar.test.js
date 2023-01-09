@@ -7,29 +7,40 @@ import {
     getByRole
  } from '@testing-library/react';
 import SearchBar from './SearchBar';
+import { Provider } from 'react-redux';
+import App from '../../app/App';
+import { store } from '../../app/store';
 
 describe('SearchBar component function', function() {
     it('renders a searchBar div', () => {
         const {getByTitle} = render(
-            <SearchBar />
+            <Provider store={store}>
+              <App />
+            </Provider>
         );
         expect(screen.getByTitle(/searchBar/i));
     });
     it('renders something such as a button with the text Search', () => {
         const {getByText} = render(
-            <SearchBar />
+            <Provider store={store}>
+              <App />
+            </Provider>
         );
         expect(screen.getByText(/Search/));
     });
     it('renders and imput textbox', () => {
         const { getByRole } = render(
-            <SearchBar />
+            <Provider store={store}>
+              <App />
+            </Provider>
         );
         expect(screen.getByRole('textbox'));
     });
     it('renders a button', () => {
         const { getByRole } = render(
-            <SearchBar />
+            <Provider store={store}>
+              <App />
+            </Provider>
         );
         expect(screen.getAllByRole('button'));
     });

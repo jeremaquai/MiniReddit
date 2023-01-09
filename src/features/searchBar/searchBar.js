@@ -1,23 +1,42 @@
 import React, { useRef } from "react";
 import { useHistory } from "react-router-dom";
-import { addSearchTerm } from "./searchSlice";
+import { 
+    addSearchTerm,
+    addSearchResults, 
+    logSearchSlice,
+    selectTerm
+} from "./searchSlice";
+import { 
+    useDispatch, 
+    useSelector,
+} from "react-redux";
 
 export default function SearchBar() {
 
+    // Set the searchTerm from the redux State
+    const searchTerm = useSelector(selectTerm);
+    
+    // Set the router History
     const history = useHistory();
 
+    // set the searchInput Reference from the imput field ** inputfield needs a ref={searchInputRef}
     const searchInputRef = useRef();
+    
+    // Set the Dispatch command
+    const dispatch = useDispatch();
 
     const onSearchHandler = (e) => {
         e.preventDefault();
 
-        console.log(searchInputRef.current.value);
-        addSearchTerm(searchInputRef.current.value);
+        // console.log(searchInputRef.current.value);
+        dispatch(addSearchTerm(searchInputRef.current.value));
+        dispatch(addSearchResults(searchThunk(searchTerm)));
         history.push('/searchResults')
     };
 
-    const onChange = (e) => {
-        addSearchTerm(e.target);
+    const searchThunk = (term) => {
+        console.log(term);
+        return fetch(`https://reddit.com/search.json?q=${term}`)
     }
 
     return (
@@ -26,7 +45,6 @@ export default function SearchBar() {
                 <input
                     id="searchTerm"
                     type='text'
-                    onChange={onChange}
                     placeholder='Search'
                     ref={searchInputRef}
 

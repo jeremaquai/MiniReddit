@@ -18,8 +18,9 @@ export default function NavBar() {
                         <NavLink 
                             key={link.name}
                             to={link.route}
-                            activeClassName='active'>
-                            {link.name}
+                            className='navLink'
+                            activeClassName='navLinkActive'>
+                            /{link.name}
                         </NavLink>
                     );
                 })

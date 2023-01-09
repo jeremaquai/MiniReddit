@@ -9,6 +9,10 @@ header {
     border-bottom: 1px solid black;
 }
 
+header a {
+    text-decoration: none;
+}
+
 #logo1 {
     color: orangered;
     font-size: 2rem;
@@ -27,8 +31,8 @@ header {
 
 /* Nav section of the app's styles */
 nav {
-    min-height: 8vh;
-    max-height: 8vh;
+    min-height: 10vh;
+    max-height: 10vh;
     background-color: orangered;
     color: azure;
     border-top: 1px solid black;
@@ -48,16 +52,45 @@ nav li {
     list-style: none;
 }
 
-nav a {
+/* nav a {
     text-decoration: none;
     color: azure;
     
+} */
+
+.navLink {
+
+    text-decoration: none;
+    color: orangered;
+    background-color: azure;
+    padding: 2px 4px;
+    border: 2px solid black;
+    border-radius: 8%;
+    font-weight: bold;
+}
+
+.navLinkActive {
+    color: blue;
+    background-color: orangered;
+    color: azure;
+    font-weight: bolder;
 }
 
 /* mainPage Section styles */
 .mainPage {
     min-height: 70vh;
     max-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+/* Home Page of the App's styles */
+.homePage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Footer section of the app's Styles */
