@@ -19,8 +19,14 @@ describe('searchSlice Reducer', () => {
     };
     it('should handle initial state', () => {
         expect(searchSliceReducer(undefined, {type: 'unknown'})).toEqual({
-            searchTerm: null,
+            searchTerm: '',
             searchResults: {}
+        });
+    });
+    it('should handle addSearchTerm with an empty searchTerm State', () => {
+        expect(searchSliceReducer(undefined, addSearchTerm('hello'))).toEqual({
+            searchTerm: 'hello',
+            searchResults: {},
         });
     });
     it('should handle addSearchTerm ', () => {

@@ -11,6 +11,7 @@ import Footer from "../components/Footer";
 import NavBar from "../features/navBar/NavBar";
 import Featured from "../pages/Featured";
 import SearchResults from "../pages/SearchResults";
+import Home from "../pages/Home";
 
  export default function App() {
     return (
@@ -22,6 +23,9 @@ import SearchResults from "../pages/SearchResults";
                 />
                 <div title="mainPage" className="mainPage">
                     <Switch>
+                        <Route exact path='/' >
+                            <Home />
+                        </Route>
                         <Route exact path='/featured' >
                             <Featured />
                         </Route>

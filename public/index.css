@@ -27,8 +27,8 @@ header {
 
 /* Nav section of the app's styles */
 nav {
-    min-height: 10vh;
-    max-height: 10vh;
+    min-height: 8vh;
+    max-height: 8vh;
     background-color: orangered;
     color: azure;
     border-top: 1px solid black;

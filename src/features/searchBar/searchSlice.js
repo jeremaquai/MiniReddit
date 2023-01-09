@@ -1,12 +1,12 @@
 import { createSlice, current } from "@reduxjs/toolkit";
 
-// Create initialState for searchResultsSlice
+// Create initialState for searchSlice
 const initialState = {
-    searchTerm: null,
+    searchTerm: '',
     searchResults: {},
 };
 
-// Create searchResultsSlice
+// Create searchSlice
 const searchSlice = createSlice({
     name: 'search',
     initialState,
