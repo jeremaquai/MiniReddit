@@ -30,51 +30,11 @@ header a {
 }
 
 /* Nav section of the app's styles */
-nav {
-    min-height: 10vh;
-    max-height: 10vh;
-    background-color: orangered;
-    color: azure;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    
-}
 
-nav ul {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    text-justify: center;
-}
 
-nav li {
-    list-style: none;
-}
 
-/* nav a {
-    text-decoration: none;
-    color: azure;
-    
-} */
 
-.navLink {
 
-    text-decoration: none;
-    color: orangered;
-    background-color: azure;
-    padding: 2px 4px;
-    border: 2px solid black;
-    border-radius: 8%;
-    font-weight: bold;
-}
-
-.navLinkActive {
-    color: blue;
-    background-color: orangered;
-    color: azure;
-    font-weight: bolder;
-}
 
 /* mainPage Section styles */
 .mainPage {
@@ -103,4 +63,15 @@ footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+.subreddits {
+    display: flex;
+    flex-direction: row;
+}
+.activeSub {
+    color: black;
+}
+.subreddits li img {
+    max-height: 30px;
 }
