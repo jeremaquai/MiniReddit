@@ -11,6 +11,7 @@ import {
     useSelector,
 } from "react-redux";
 
+
 export default function SearchBar() {
 
     // Set the searchTerm from the redux State
@@ -30,7 +31,9 @@ export default function SearchBar() {
 
         // console.log(searchInputRef.current.value);
         dispatch(addSearchTerm(searchInputRef.current.value));
-        dispatch(addSearchResults(searchThunk(searchTerm)));
+
+        
+        // dispatch(addSearchResults(searchThunk(searchTerm)));
         history.push('/searchResults')
     };
 

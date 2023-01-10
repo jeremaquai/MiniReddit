@@ -8,7 +8,7 @@ export const NAVLINKS = [
     },
      {
         name: 'SquaredCircle',
-        url: '/',
+        url: '/SquaredCircle',
         route: ROUTES.squaredCircleRoute,
     },
      {
