@@ -8,9 +8,6 @@ import {
 import ROUTES from "./routes";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import NavBar from "../features/navBar/NavBar";
-import Featured from "../pages/Featured";
-import SearchResults from "../pages/SearchResults";
 import Home from "../pages/Home";
 
  export default function App() {
@@ -18,19 +15,10 @@ import Home from "../pages/Home";
         <div title='app'>
             <Router>
                 <Header />
-                <NavBar
-                    ROUTES={ROUTES} 
-                />
                 <div title="mainPage" className="mainPage">
                     <Switch>
                         <Route exact path='/' >
                             <Home />
-                        </Route>
-                        <Route exact path='/featured' >
-                            <Featured />
-                        </Route>
-                        <Route path='/searchresults'>
-                            <SearchResults />
                         </Route>
                     </Switch>
                 </div>

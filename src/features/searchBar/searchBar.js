@@ -1,10 +1,8 @@
 import React, { useRef } from "react";
 import { useHistory } from "react-router-dom";
 import { 
-    addSearchTerm,
-    addSearchResults, 
-    logSearchSlice,
-    selectTerm
+    changeActiveSearch,
+    selectSearchTerm, 
 } from "./searchSlice";
 import { 
     useDispatch, 
@@ -15,7 +13,7 @@ import {
 export default function SearchBar() {
 
     // Set the searchTerm from the redux State
-    const searchTerm = useSelector(selectTerm);
+    const searchTerm = useSelector(selectSearchTerm);
     
     // Set the router History
     const history = useHistory();
@@ -30,7 +28,7 @@ export default function SearchBar() {
         e.preventDefault();
 
         // console.log(searchInputRef.current.value);
-        dispatch(addSearchTerm(searchInputRef.current.value));
+        dispatch(changeActiveSearch(searchInputRef.current.value));
 
         
         // dispatch(addSearchResults(searchThunk(searchTerm)));

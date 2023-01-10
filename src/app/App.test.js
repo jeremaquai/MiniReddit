@@ -21,14 +21,7 @@ describe('RedditCreeper Project App', function() {
         expect(screen.getByTitle(/header/i));
     });
 
-    it('renders a Navigation Bar', () => {
-        const {getByRole} = render(
-            <Provider store={store}>
-                <App />
-            </Provider>
-        );   
-        expect(screen.getByRole('navigation'))
-    });
+    
 
     it('renders a mainPage dive', () => {
         const { getByTitle } = render(
