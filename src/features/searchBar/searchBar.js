@@ -35,10 +35,7 @@ export default function SearchBar() {
         history.push('/searchResults')
     };
 
-    const searchThunk = (term) => {
-        console.log(term);
-        return fetch(`https://reddit.com/search.json?q=${term}`)
-    }
+
 
     return (
         <div title="searchBar" className="searchBar">
